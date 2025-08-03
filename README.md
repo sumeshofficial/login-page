@@ -30,7 +30,7 @@ A simple and secure admin login system built with Node.js, Express.js, and EJS t
 Clone the repository:  
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/login-page.git
+git clone https://github.com/sumeshofficial/login-page.git
 cd login-page
 ```
 
