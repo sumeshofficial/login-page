@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(75, 14, 154, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  font-family: "Poppins", sans-serif;
+}
+
+form {
+  border-radius: 20px;
+  margin-top: 150px !important;
+  width: 24% !important;
+  background-color: white !important;
+  padding: 50px;
+}
+
+.login-form .btn-primary {
+  width: 100%;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(75, 14, 154, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+.btn-primary1 {
+  width: 100%;
+  border: none;
+  border-radius: 50px;
+  background: white;
+}
+
+.form-control {
+  color: rgba(0, 0, 0, 0.87);
+  border-bottom-color: rgba(0, 0, 0, 0.42);
+  box-shadow: none !important;
+  border: none;
+  border-bottom: 1px solid;
+  border-radius: 4px 4px 0 0;
+}
+
+h4 {
+  font-size: 2rem !important;
+  font-weight: 700;
+}
+
+.form-label {
+  font-weight: 800 !important;
+}
+
+@media only screen and (max-width: 600px) {
+  form {
+    width: 100% !important;
+  }
+}
+
+/* home */
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.home-page{
+    background-color: #696b6e;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header */
+header {
+  background-color: #000000;
+  padding: 20px 0;
+}
+
+.logo {
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.container h1 {
+    color: white;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+nav {
+  float: right;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+}
+
+.nav-links li a:hover {
+  color: #007bff;
+}
+
+/* Clearfix */
+header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Hero Section */
+.hero {
+  background: url("https://via.placeholder.com/1200x500") no-repeat center
+    center/cover;
+  height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-content {
+  background-color: rgb(0, 0, 0);
+  padding: 30px;
+  width: 350px;
+  height: 450px;
+  border-radius: 10px;
+  padding-top: 125px;
+}
+
+.login-form .btn {
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+}
+
+.login-form .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.home-page .btn{
+    border: none;
+}
+
+.home-page .btn:hover {
+    background-color: #696b6e;
+    border: none;
+}
