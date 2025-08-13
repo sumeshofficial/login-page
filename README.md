@@ -34,7 +34,7 @@ git clone https://github.com/sumeshofficial/login-page.git
 cd login-page
 ```
 
-Install dependencies:
+### Install dependencies:
 ```bash
 npm install
 ```
@@ -46,7 +46,7 @@ PASSWORD=your_admin_password
 ```
 Replace `your_admin_username` and `your_admin_password` with your actual credentials.
 
-Running the App
+### Running the App
 
 Start the server in development mode (auto-restarts on code changes):
 ```bash
@@ -61,7 +61,7 @@ npm start
 Open your browser and visit:
 http://localhost:3000
 
-Project Structure
+### Project Structure
 ```bash
 login-page/
 ├── app.mjs             # Main application file  
