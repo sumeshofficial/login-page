@@ -71,11 +71,7 @@ app.post("/login", (req, res) => {
 
   let errMsg = "";
 
-  if (username != ADMIN && password === PASSWORD) {
-    errMsg = "Incorrect Username";
-  } else if (username === ADMIN && password != PASSWORD) {
-    errMsg = "Incorrect Password";
-  } else {
+  if (username !== ADMIN || password !== PASSWORD) {
     errMsg = "Admin not found";
   }
 

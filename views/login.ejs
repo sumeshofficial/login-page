@@ -1,18 +1,77 @@
 <div class="container-fluid">
-  <form class="mx-auto login-form" action="/login" method="post" onsubmit="validateLoginForm()">
+  <form class="mx-auto login-form" action="/login" method="post" id="form">
     <h4 class="text-center">Login</h4>
     <% if (err) {%>
     <p class="text-danger text-center fs-6"><%= err %></p>
     <%}%>
     <div class="mb-3 mt-5">
       <label for="exampleInputEmail1" class="form-label">User Name</label>
-      <input type="text" class="form-control" id="exampleInputEmail1" autocomplete="off" name="username">
+      <div class="error text-danger"></div>
+      <input type="text" class="form-control" id="username" autocomplete="off" name="username">
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" autocomplete="off" name="password">
+      <div class="error text-danger"></div>
+      <input type="password" class="form-control" id="password" autocomplete="off" name="password">
     </div>
 
     <button type="submit" class="btn btn-primary mt-5">Login</button>
   </form>
 </div>
+
+<script>
+
+  const form = document.getElementById('form');
+  const username = document.getElementById('username');
+  const password = document.getElementById('password');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    if (validateInputs()) {
+      form.submit();
+    }
+  });
+
+
+  const setError = (element, message) => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector(".error");
+
+    errorDisplay.innerText = message;
+
+    inputControl.classList.add("error");
+    inputControl.classList.remove("success");
+  };
+
+  const setSuccess = (element) => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector(".error");
+
+    errorDisplay.innerText = "";
+    inputControl.classList.add("success");
+    inputControl.classList.remove("error");
+  };
+
+  const validateInputs = () => {
+    let flag = true;
+    const usernameValue = username.value.trim();
+    const passwordValue = password.value.trim();
+
+    if (usernameValue === "") {
+      setError(username, "Username is required");
+      flag = false;
+    } else {
+      setSuccess(username);
+    }
+
+    if (passwordValue === "") {
+      setError(password, "Password is required");
+      flag = false;
+    } else {
+      setSuccess(password);
+    }
+
+    return flag;
+  };
+</script>
